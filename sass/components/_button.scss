@@ -8,7 +8,7 @@
       text-align: center;
       border-radius: 10rem;
       position: relative;
-      font-size: 1.6rem;
+      font-size: $default-font-size;
   
       transition: transform 0.2s, box-shadow 0.2s;
     }
@@ -57,3 +57,29 @@
     }
   }
   
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: .1rem solid $color-primary;
+    padding: .3rem;
+
+    transition: all .2s;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    transform: translateY(-.2rem);
+  }
+
+  &:active {
+    box-shadow: 0 .5rem 1rem rgba($color-black, 0.15);
+    transform: translateY(0);
+  }
+}
