@@ -1,3 +1,20 @@
+/*
+0 to 600px:    Phone
+600 to 900px:  Tablet Portrait
+900 to 1200px: Tablet Landscape
+1200 to 1800:  Normal Desktops ( Original CSS Code )
+1800px+        Big desktops
+
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+
+*/
 /* Main Heading Animation */
 @keyframes moveInLeft {
   0% {
@@ -38,6 +55,15 @@
 html {
   /* 62.5% of 16px = 10px */
   font-size: 62.5%; }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box; }
