@@ -22,6 +22,20 @@
         transform: translate(-50%, -50%) scale(.4);
 
         transition: all .4s .2s;
+
+        
+        @include respond(tab-land) {
+            width: 80%;
+            display: block;
+        }
+        
+        @include respond(phone) {
+            width: 90%;
+
+            & > div {
+                padding: 2rem 3rem;
+            }
+        }
     }
 
     
@@ -38,6 +52,14 @@
     &__left {
         width: 33.333333%;
         display: table-cell;
+
+        
+        @include respond(tab-land) {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 3rem 5rem 0;
+        }
     }
 
     &__right {
@@ -45,11 +67,27 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(tab-land) {
+            width: 100%;
+            display: block;
+            position: relative;
+
+            & > .btn {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
     }
 
     &__img {
-        display: block;
+        display: inline-block;
         width: 100%;
+
+        @include respond(tab-land) {
+            width: 49%;
+            height: auto;
+        }
     }
 
     &__text {
@@ -61,6 +99,11 @@
         column-rule: 1px solid $color-grey-light-2;
 
         hyphens: auto;
+
+        @include respond(tab-port) {
+            column-count: 1;
+        }
+        
     }
 
     &__close {
